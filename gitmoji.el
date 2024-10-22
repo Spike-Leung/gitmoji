@@ -219,7 +219,7 @@ It takes a single argument X, which is a list of selected Gitmoji's information.
 
 ;;;###autoload
 (define-minor-mode gitmoji-commit-mode
-  "Toggle gitmoji-commit mode. This is a global setting."
+  "Toggle gitmoji-commit mode.This is a global setting."
   :global t
   :init-value nil
   :lighter " Gitmoji"
@@ -228,3 +228,4 @@ It takes a single argument X, which is a list of selected Gitmoji's information.
     (remove-hook 'git-commit-mode-hook 'gitmoji-insert)))
 
 (provide 'gitmoji)
+;;; gitmoji.el ends here
