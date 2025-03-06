@@ -214,7 +214,7 @@ It takes a single argument X, which is a list of selected Gitmoji's information.
   (cond
    ((and (memql 'ivy gitmoji-selection-backend) (featurep 'ivy)) (gitmoji-insert-ivy))
    ((and (memql 'helm gitmoji-selection-backend) (featurep 'helm)) (gitmoji-insert-helm))
-   ((and (memql 'consult gitmoji-selection-backend) (featurep 'consult)) (gitmoji-insert-consult))
+   ((and (memql 'consult gitmoji-selection-backend) (package-installed-p 'consult)) (gitmoji-insert-consult))
    (t (warn "No valid backend selected for Gitmoji."))))
 
 ;;;###autoload
